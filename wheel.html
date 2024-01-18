@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- Lauren Cameron 12/5/2019 -->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wheel</title>
+    <script>
+    let endCount; let wordNum;
+    let picture; 
+    let newWord; let win; 
+    let lgth; let word; let guessLetter; let goodGuess;
+    function startGame()
+    {
+        endCount = 0;
+        wordNum = Math.floor((Math.random()*9)+1);
+        picture = "pic" + wordNum + ".jpg";
+        switch(wordNum)
+        {
+            case 1:
+                word = "pineapple"; break;
+            case 2:
+                word = "orange"; break;
+            case 3:
+                word = "pear"; break;
+            case 4:
+                word = "apple"; break;
+            case 5:
+                word = "catnip"; break;
+            case 6:
+                word = "guava"; break;
+            case 7:
+                word = "banana"; break;
+            case 8:
+                word = "tomato"; break;
+            case 9:
+                word = "ackee"; break;
+            case 10:
+                word = ""; break;
+        }
+        newWord = ""; win = false;
+        lgth = word.length; goodGuess = false;
+        alert("Category is fruit here is the word. WORD = " + word );
+        for (let i = 0; i < lgth; i++)
+            newWord = newWord + "_ ";
+       
+        document.getElementById("game").innerHTML = newWord;
+        document.getElementById("guess").style.display="";
+    }
+    
+    function Wheel()
+    {
+         
+        document.getElementById("money").innerHTML = ("");
+        for (let i = 0; i < lgth; i++)
+            newWord = newWord + "_ ";
+    }
+    function makeGuess()
+    {
+        if (win == false && endCount < 10)
+        {
+            goodGuess = false;
+            guessLetter = document.getElementById("userInput").value;
+            for (let j = 0; j < lgth; j++)
+            {
+                if (guessLetter == word.charAt(j))
+                {
+                    goodGuess = true;
+                    let offSet = 2*j;
+                    newWord = setCharAt(newWord, offSet, guessLetter);
+                } 
+            }
+            document.getElementById("game").innerHTML = newWord;
+            win = checkWord(word, newWord);
+            if (win == true)
+            {
+                document.getElementById("result").innerHTML = ("You win!");
+                document.getElementById("money").innerHTML = ("<img src = ' images/" + picture + "' />");
+            }
+            else if (win == false)
+            {
+                document.getElementById("result").innerHTML = ("not a winner yet");
+                if (goodGuess == false)
+                {
+                    endCount = endCount + 1;
+                    document.getElementById("money").innerHTML = ("<img src ='images/hangman" + endCount + ".gif' />");
+                }
+            }
+        }
+        if (endCount == 10)
+        {
+            for (let i = 0; i < lgth; i++)
+            newWord = newWord + "_ ";
+            document.getElementById("result").innerHTML = ("Sorry, you lose!");
+            document.getElementById("guess").style.display="hidden";
+        }
+    }
+    function checkWord(word, otherWord)  
+    {
+        let cleanWord;
+        cleanWord = otherWord;
+        cleanWord = otherWord.replace(/ /g, "");
+        if (word == cleanWord)
+            return true;
+        else 
+            return false;
+    }
+    function setCharAt(str,index,chr) 
+    {
+        if(index > str.length-1) 
+            return str;
+        return str.substr(0,index) + chr + str.substr(index+1);
+    }	
+    
+</script>   
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid bg-secondary p-2">
+      <h1 class=" display-4 text-white text-center">Lauren's Games</h1>
+      <ul class="nav justify-content-center ">
+        <li class="nav-item">
+          <a class="nav-link  text-dark" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="play_games.html">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="sign.html">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-5">
+     
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <section>
+      <div id="games text-white">
+         <p class = "text-white">Here we are going to play a modified version of Wheel of Fortune.Click the button below to "spin the wheel" and draw a potential prize amount.If you then correctly guess a letter in the current puzzle your bank will increase by the prize amount you spun multiplied by the number of times that the letter you guessed showed up in the puzzle.</p>
+       
+         
+          <input type="button" value="Spin the Wheel" onclick="startGame()" onclick ="Wheel()" />
+          <p>Bank:</p>
+          <p>Misses:</p>
+          <p>Guess: <input type="text" id="userInput" size="12" /><button id="guess" onclick="makeGuess();">Submit</button></p>
+
+         
+           <input type="button" value="Play Again" onclick="startGame()" />
+           
+        
+      </div>
+  </section>
+
+  <div class="container-fluid p-2 fixed-bottom bg-secondary">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="text-white">
+          Copyright &copy; 2019 Lauren
+        </h6>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="d-inline"><a class="rec text-white" href="mailto:01009790@sfcollege.edu">01009790@sfcollege.edu</a>
+        </h6>
+
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- Lauren Cameron 12/5/2019 -->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hero</title>
+    <script>
+      var superman = {
+            name: 'Superman',
+            realName: 'Clark Kent',
+            height: "6 feet 1 inch",
+            weight: 235,
+            hero: true,
+            villain: false,
+            allies: ['Batman', 'Supergirl', 'Wonder Woman'],
+            eye: 'blue',
+            hair:'black',
+            phrase() {
+                return 'Up, up and away!';
+            }
+        };
+        
+        console.log(name in superman);
+        
+        for(const key in superman){
+	       console.log(key + ": " + superman[key]);
+        }
+              var wonderWoman = {
+            name: 'Wonder Woman',
+            realName: 'Diana Prince',
+            height: "5 feet 9 inch",
+            weight: 165,
+            hero: true,
+            villain: false,
+            allies: ['Batman', 'Superman', 'Superwoman'],
+            eye: 'brown',
+            hair:'black',
+            phrase() {
+                return 'Fighting doesnt make you a hero';
+            }
+        };
+        
+        console.log(name in wonderWoman);
+        
+        for(const key in wonderWoman){
+	       console.log(key + ": " + wonderWoman[key]);
+        }
+             var deadpool = {
+            name: 'Deadpool',
+            realName: 'Wade Wilson',
+            height: "6 feet 2 inch",
+            weight: 210,
+            hero: true,
+            villain: false,
+            allies: ['Cable', 'Domino', 'Vanessa'],
+            eye: 'Brown',
+            hair:'Bald',
+            phrase() {
+                return 'Dad?';
+            }
+        };
+        
+        console.log(name in deadpool);
+        
+        for(const key in deadpool){
+	       console.log(key + ": " + deadpool[key]);
+        }
+            var loki = {
+            name: 'Loki',
+            realName: 'Loki Laufeyson',
+            height: "6 feet 4 inch",
+            weight: 525,
+            hero: false,
+            villain: true,
+            allies: [' Thor ' , ' Frost giant ' , ' Fenhir ' ],
+            eye: 'Blue',
+            hair:'Black hair',
+            phrase() {
+                return 'I am Loki son of Odin';
+            }
+        };
+        
+        console.log(name in loki);
+        
+        for(const key in loki){
+	       console.log(key + ": " + loki[key]);
+        }
+        
+        function displayHero1()
+        {
+            document.getElementById("name").innerHTML = superman.name;
+            document.getElementById("realName").innerHTML = superman.realName;
+            document.getElementById("height").innerHTML = superman.height;
+            document.getElementById("weight").innerHTML = superman.weight;
+            document.getElementById("hero").innerHTML = superman.hero;
+            document.getElementById("villain").innerHTML = superman.villain;
+            document.getElementById("allies").innerHTML = superman.allies;
+            document.getElementById("eye").innerHTML =superman.eye;
+            document.getElementById("hair").innerHTML =superman.hair;
+            document.getElementById("phrase").innerHTML = superman.phrase();
+        }
+   
+  function displayHero2()
+        {
+            document.getElementById("name").innerHTML = deadpool.name;
+            document.getElementById("realName").innerHTML = deadpool.realName;
+            document.getElementById("height").innerHTML = deadpool.height;
+            document.getElementById("weight").innerHTML = deadpool.weight;
+            document.getElementById("hero").innerHTML = deadpool.hero;
+            document.getElementById("villain").innerHTML = deadpool.villain;
+            document.getElementById("allies").innerHTML = deadpool.allies;
+            document.getElementById("eye").innerHTML =deadpool.eye;
+            document.getElementById("hair").innerHTML =deadpool.hair;
+            document.getElementById("phrase").innerHTML = deadpool.phrase();
+        }
+              function displayVillian1()
+        {
+            document.getElementById("name").innerHTML = loki.name;
+            document.getElementById("realName").innerHTML = loki.realName;
+            document.getElementById("height").innerHTML = loki.height;
+            document.getElementById("weight").innerHTML = loki.weight;
+            document.getElementById("hero").innerHTML = loki.hero;
+            document.getElementById("villain").innerHTML = loki.villain;
+            document.getElementById("allies").innerHTML = loki.allies;
+            document.getElementById("eye").innerHTML =loki.eye;
+            document.getElementById("hair").innerHTML =loki.hair;
+            document.getElementById("phrase").innerHTML = loki.phrase();
+        }
+            function displayHero3()
+        {
+            document.getElementById("name").innerHTML = wonderWoman.name;
+            document.getElementById("realName").innerHTML = wonderWoman.realName;
+            document.getElementById("height").innerHTML = wonderWoman.height;
+            document.getElementById("weight").innerHTML = wonderWoman.weight;
+            document.getElementById("hero").innerHTML = wonderWoman.hero;
+            document.getElementById("villain").innerHTML = wonderWoman.villain;
+            document.getElementById("allies").innerHTML = wonderWoman.allies;
+            document.getElementById("eye").innerHTML =wonderWoman.eye;
+            document.getElementById("hair").innerHTML =wonderWoman.hair;
+            document.getElementById("phrase").innerHTML = wonderWoman.phrase();
+        }
+       
+      
+        </script>
+        <script> 
+        var Window; 
+  
+        // Function that open the new Window 
+        function windowOpen() { 
+            Window = window.open( 
+              "https://www.youtube.com/watch?v=pJCgeOAKXyg", 
+                "_blank", "width=450, height=450"); 
+        } 
+  
+        // function that Closes the open Window 
+        function windowClose() { 
+            Window.close(); 
+        } 
+    </script> 
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid bg-secondary p-2">
+      <h1 class=" display-4 text-white text-center">Lauren's Games</h1>
+      <ul class="nav justify-content-center ">
+        <li class="nav-item">
+          <a class="nav-link  text-dark" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="play_games.html">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="sign.html">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-5">
+     
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <section>
+      <p><input type="button" value = "Meet Superman" onclick="displayHero1();" /></p>
+       <p><input type="button" value = "Meet Deadpool" onclick="displayHero2();" /></p>
+      <p><input type="button" value = "Meet Wonder Woman" onclick="displayHero3();" /></p>
+         <p><input type="button" value = "Meet Loki" onclick="displayVillian1();" /></p> 
+          <p><input type="button" value = "Secret Button" onclick="windowOpen();" /></p> 
+          <p><input type="button" value = "Secret Button Close" onclick="windowClose();" /></p> 
+                                     
+      
+      ------------------------------------------------------------
+      <br>Name:
+      <div id = "name"><p>&nbsp;</p></div>
+      <br>Real Name:
+      <div id = "realName"><p>&nbsp;</p></div>
+      <br>Height:
+      <div id = "height"><p>&nbsp;</p></div>
+      <br>Weight:
+      <div id = "weight"><p>&nbsp;</p></div>
+      <br>Villain? 
+      <div id = "villain"><p>&nbsp;</p></div>
+      <br>Hero? 
+      <div id = "hero"><p>&nbsp;</p></div>
+      <br>Allies:
+      <div id = "allies"><p>&nbsp;</p></div>
+      <br>Eye color:
+      <div id="eye"><p>&nbsp;</p></div>
+      <br>Hair color:
+      <div id="hair"><p>&nbsp;</p></div>
+      <br>Catch Phrase:
+      <div id = "phrase"><p>&nbsp;</p></div>
+      
+
+  </section>
+  </body>
+  <div class="container-fluid p-2 fixed-bottom bg-secondary">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="text-white">
+          Copyright &copy; 2019 Lauren
+        </h6>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="d-inline"><a class="rec text-white" href="mailto:01009790@sfcollege.edu">01009790@sfcollege.edu</a>
+        </h6>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+</html>

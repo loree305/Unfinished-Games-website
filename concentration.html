@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- Lauren Cameron 12/5/2019 -->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Concentration</title>
+    <script>
+    let imgCompare = "";
+    let spellCompare = "";
+    let count = 0;
+    function getImage(x)
+    {
+        let iLgth = x.length;
+        imgCompare = x.substr(1, iLgth -1);
+    }
+    function getSpell(x)
+    {
+        let sLgth = x.length;
+        spellCompare = x.substr(1, sLgth -1);
+        compareThem(imgCompare, spellCompare);
+    }
+    function compareThem()
+    {
+        if (imgCompare == spellCompare)
+        {
+            var newStuff = document.createElement("P");
+            var newMessage = document.createTextNode("CORRECT!");
+            newStuff.appendChild(newMessage);
+            document.getElementById("s"+ spellCompare).appendChild(newStuff);
+            count++;
+            checkEnd();
+        }
+        else
+            alert ("wrong... Try again");
+    }
+    function checkEnd()
+    {
+        if (count == 12)
+        {
+            var endIt = document.createElement("H3");
+            var endMessage = document.createTextNode("Congratulations! You are a great speller!");
+            endIt.appendChild(endMessage);
+            document.getElementById("the_end").appendChild(endIt);
+        }
+    }
+function Check()
+{
+    
+  let el = document.getElementById("num1");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+ function Check2()
+{
+    
+  let el = document.getElementById("num2");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+   function Check3()
+{
+    
+  let el = document.getElementById("num3");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+   function Check4()
+{
+    
+  let el = document.getElementById("num4");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+     function Check5()
+{
+    
+  let el = document.getElementById("num5");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+      function Check6()
+{
+    
+  let el = document.getElementById("num6");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+function Check7()
+{
+    
+  let el = document.getElementById("num7");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+    
+}
+function Check8()
+{
+    
+  let el = document.getElementById("num8");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+}
+    
+ function Check9()
+{
+    
+  let el = document.getElementById("num9");
+    
+    console.log(el.value);
+    if (el.value === "x")
+        {
+            el.style.background="orange";
+        }
+    else if (el.value === "o")
+        {
+             el.style.background="yellow";
+        }
+      function Reset()
+{
+   let re = document.querySelectorAll(".tic");
+    for (let i = 0;i < re.length; i++)
+        {
+              console.log(re[i]);
+            re[i].style.background = "white";
+        }
+  
+}
+
+</script>
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid bg-secondary p-2">
+      <h1 class=" display-4 text-white text-center">Lauren's Games</h1>
+      <ul class="nav justify-content-center ">
+        <li class="nav-item">
+          <a class="nav-link  text-dark" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="play_games.html">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="sign.html">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-5">
+      <h3 class = "text-white">How good is your memory? Find all the matching pictutes in 25 moves.</h3>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <section>
+            <table align = "center" border = "3" >
+                    <tr><td colspan = "6" class = "text-white">Click on the little button below a picture</td></tr>
+                        <tr>
+                            <td id = "kitty1"><img src="images/kitty1.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty1')" /></td>
+                            <td id = "kitty2"><img src="images/kitty2.jpg" style="width:60px;height:60px;"/><button onclick="getImage('kitty2')" /></td>
+                            <td id = "kitty3"><img src="images/kitty3.jfif" style="width:60px;height:60px;" /><button onclick="getImage('kitty3')" /></td>
+                            <td id = "kitty4"><img src="images/kitty4.png" style="width:60px;height:60px;" /><button onclick="getImage('kitty4')" /></td>
+                            </tr>
+                            <tr>
+                            <td id = "kitty5"><img src="images/kitty5.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty5')" /></td>
+                            <td id = "kitty6"><img src="images/kitty6.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty6')" /></td>
+                            <td id = "kitty2"><img src="images/kitty2.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty2')" /></td>
+                            <td id = "kitty3"><img src="images/kitty3.jfif" style="width:60px;height:60px;" /><button onclick="getImage('kitty3')" /></td>
+                            </tr>
+                            <tr>
+                            <td id = "kitty6"><img src="images/kitty6.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty6')" /></td>
+                            <td id = "kitty4"><img src="images/kitty4.png" style="width:60px;height:60px;"/><button onclick="getImage('kitty4')" /></td>
+                            <td id = "kitty1"><img src="images/kitty1.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty1')" /></td>
+                            <td id = "kitty5"><img src="images/kitty5.jpg" style="width:60px;height:60px;" /><button onclick="getImage('kitty5')" /></td>
+                            </tr>
+                            </table>
+        <div id="games">
+            <p>&nbsp;</p>
+             <div style="clear:both;"></div>
+            <input type="reset" value="rest and play again" onclick = "Reset()"  />
+            
+        </div>
+    </section>
+
+    <div class="container-fluid p-2 fixed-bottom bg-secondary">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="text-white">
+          Copyright &copy; 2019 Lauren
+        </h6>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <h6 class="d-inline"><a class="rec text-white" href="mailto:01009790@sfcollege.edu">01009790@sfcollege.edu</a>
+        </h6>
+
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </body>
+</html>
